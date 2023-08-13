@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "schwift_of_the_weeks",
+  "info": {
+    "singularName": "schwift-of-the-week",
+    "pluralName": "schwift-of-the-weeks",
+    "displayName": "schwiftOfTheWeek"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "week": {
+      "type": "integer"
+    },
+    "song": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::song.song"
+    },
+    "date": {
+      "type": "date"
+    },
+    "review": {
+      "type": "text"
+    },
+    "reviewPerson": {
+      "type": "string"
+    },
+    "schwiftFaktor": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "links",
+  "info": {
+    "singularName": "link",
+    "pluralName": "links",
+    "displayName": "Link",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "link": {
+      "type": "string"
+    },
+    "linkttype": {
+      "type": "enumeration",
+      "enum": [
+        "bandcamp_album",
+        "bandcamp_artist",
+        "soundcloud_album",
+        "soundcloud_artist",
+        "soundcloud_song",
+        "spotify_artist",
+        "spotfy_album",
+        "spotify_song",
+        "website_artist",
+        "instagram_artist",
+        "youtube_artist"
+      ]
+    },
+    "band": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::band.band",
+      "inversedBy": "links"
+    }
+  }
+}
